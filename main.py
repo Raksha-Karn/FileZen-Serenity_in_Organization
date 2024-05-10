@@ -36,7 +36,7 @@ if sys.platform.startswith("linux"):
 
 
 if sys.platform.startswith("darwin"):
-    username = os.getlogin()
+    username = os.getenv("USER")
     source_dir = os.path.join("/Users", username, "Downloads")
     dest_dir = os.path.join("/Users", username, "Desktop")
     
