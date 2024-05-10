@@ -8,7 +8,7 @@ import sys
 
     
 if sys.platform.startswith("win"):
-    username = os.getlogin()
+    username = os.get_login()
 
     source_dir = os.path.join("C:\\Users", username, "Downloads")
     
@@ -22,7 +22,7 @@ if sys.platform.startswith("win"):
 
     
 if sys.platform.startswith("linux"):
-    username = os.getlogin()
+    username = os.getenv("USER")
 
     source_dir = os.path.join("/home", username, "Downloads")
     
